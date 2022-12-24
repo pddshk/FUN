@@ -1,0 +1,140 @@
+% !TeX spellcheck = ru_RU
+% !TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+
+\documentclass[a4paper,12pt]{extarticle}
+\usepackage[no-math]{fontspec}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xpatch}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{yfonts}
+\usepackage[inline]{enumitem}
+\usepackage{unicode-math-xetex}
+
+\usepackage{xunicode}
+\usetikzlibrary{babel}
+
+% Font sepcifications
+\setmainfont{palatinolinotype}[
+    Extension = .ttf,
+    UprightFont = *-roman,
+    BoldFont = *-bold,
+    ItalicFont = *-italic,
+    BoldItalicFont = *-bolditalic
+]
+
+\setmathfont{latinmodern-math.otf}
+\setmathfont[range={\varnothing,\setminus}]{XITS Math.otf}
+\setmathfont[range=bb]{texgyrepagella-math.otf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\baselinestretch}{1.2857142857142858094476878250134177505970001220703125}\large\rm
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+    \ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+    \hspace{\labelsep}%
+    \else
+    \ifnum\enit@type=\z@
+    \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}%
+    \fi
+}
+
+\xpatchcmd{\proof}{\@addpunct{.}}{}{}{}
+
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{corollary}{\indent Следствие}%[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem*{statement}{\indent Утверждение}
+\newtheorem{definition}{\indent Определение}[section]
+\newtheorem{example}{\indent Пример}%[section]
+\newtheorem*{remark}{\indent Замечание}
+\newtheorem*{question}{\indent Вопрос}
+\newtheorem*{excercise}{\indent Упражнение}
+\newtheorem*{corollary*}{\indent Следствие}
+
+\renewcommand{\qedsymbol}{$\lhd$}
+
+\addto\captionsrussian{\renewcommand{\proofname}{$\rhd$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pref}[1]{(\ref{#1})}
+
+\newcommand{\factor}[2]{\raisebox{.3em}{$#1$}\kern-.3em\Big/\kern-.3em\raisebox{-.3em}{$#2$}}
+
+
+\newcommand{\brac}[1]{\left(#1\right)}
+\newcommand{\fbrac}[1]{\left\{#1\right\}}
+\newcommand{\sbrac}[1]{\left[#1\right]}
+\newcommand{\abrac}[1]{\langle#1\rangle}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\eqby}[1]{\stackrel{\mathrm{#1}}{=}}
+\newcommand{\implby}[1]{\stackrel{\mathrm{#1}}{\implies}}
+\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\iffdef}{\stackrel{\mathrm{def}}{\iff}}
+\newcommand{\dd}[2]{\frac{d #1}{d #2}}
+
+\newcommand{\at}[2]{\left.#1\right\vert_{#2}}
+
+\newcommand{\partiald}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\partialdd}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}}
+
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator*{\olim}{\overline{\lim}}
+\DeclareMathOperator{\transposed}{^{T}}
+\newcommand{\ollim}[1]{\olim\limits_{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \begin{titlepage}
+        \vfill
+        \centering\Huge\bfseries Конспект лекций по функциональному анализу
+        \vfill
+    \end{titlepage}
+    \tableofcontents
+    \section{Алгебры, идеалы, максимальные идеалы}
+
+    \section{Нормированная алгебра. Свойства нормы}
+
+    \section{Банаховы алгебры}
+
+    \section{Спектр, теорема о непустоте спектра мультипликативного функционала в банаховой алгебре}
+
+    \section{Топология на пространстве максимальных идеалов}
+
+    \section{Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр}
+
+    \section{Теорема Виннера об абсолютной сходимости}
+
+    \section{Инволюция. $\mathbf{C^*}$-алгебры. Теорема Банаха-Ала-Оглу}
+
+    \section{Теорема Стоуна---Вейерштрасса}
+
+    \section{Почти периодические функции}
+
+    \section{Расслоения}
+
+    \section{Квазипериодические функции}
+
+\end{document}
