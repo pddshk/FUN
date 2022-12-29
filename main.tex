@@ -1,7 +1,7 @@
 % !TeX spellcheck = ru_RU
 % !TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
 
-\documentclass[a4paper,12pt]{extarticle}
+\documentclass[12pt]{extarticle}
 \usepackage[no-math]{fontspec}
 \usepackage[english,russian]{babel}
 \usepackage{indentfirst}
@@ -16,6 +16,7 @@
 \usepackage{yfonts}
 \usepackage[inline]{enumitem}
 \usepackage{unicode-math-xetex}
+\usepackage{geometry}[a4papre, top=1cm, bottom=1cm, right=1cm, left=1cm]
 
 \usepackage{xunicode}
 \usetikzlibrary{babel}
@@ -115,28 +116,41 @@
         \null
     \end{titlepage}
     \tableofcontents
-    \section{Алгебры. Идеалы. Максимальные идеалы}
+    \newpage
+    \section{Алгебра, идеал, максимальный идеал. Условия обратимости.}
+    Рассмотрим векторное пространство $V$ над полем $F$.
+    \begin{definition}
+        \textbf{Алгеброй} называется \dots
+    \end{definition}
+    \begin{theorem}\label{th:some theorem}
+        Любое векторное пространство можно доопределить до алгебры
+    \end{theorem}
+    \begin{proof}
+        Доказательство
+    \end{proof}
+    \begin{corollary}
+        Всё круто
+    \end{corollary}
+    \begin{example}
+        Удобные макросы для математического текста можно посмотреть в преамбуле:
+        $$
+        \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \sigma(A) = \{\lambda\mid\nexists(A-\lambda I)^{-1}\}
+        $$
+    \end{example}
+    \section{Определение и примеры нормированных алгебр. Свойства норм.}
 
-    \section{Нормированная алгебра. Свойства нормы}
+    \section{Банахова алгебра. Теорема о непустоте спектра в банаховой алгебре.}
 
-    \section{Банаховы алгебры}
+    \section{Топология на пространстве максимальных идеалов. Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр.}
 
-    \section{Спектр. Теорема о непустоте спектра мультипликативного функционала в банаховой алгебре}
-
-    \section{Топология на пространстве максимальных идеалов}
+    \section{Теорема Винера об абсолютно сходящихся рядах.}
 
     \section{Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр}
 
     \section{Теорема Винера об абсолютной сходимости}
 
-    \section{Инволюция. $\mathbf{C^*}$-алгебры. Теорема Банаха-Ала-Оглу}
+    \section{Алгебра с инволюцией. $C^*$-алгебра. Теорема Банаха~--- Алаоглу. Теорема Стоуна~--- Вейерштрасса.}
 
-    \section{Теорема Стоуна---Вейерштрасса}
-
-    \section{Почти периодические функции}
-
-    \section{Расслоения}
-
-    \section{Квазипериодические функции}
+    \section{Примеры пространств максимальных идеалов (почти периодические функции, квазипериодические функции).}
 
 \end{document}
