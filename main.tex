@@ -15,7 +15,8 @@
 \usepackage{mathrsfs}
 \usepackage{yfonts}
 \usepackage[inline]{enumitem}
-\usepackage{unicode-math-xetex}
+\usepackage{arevmath}
+\usepackage{unicode-math}
 \usepackage{geometry}[a4papre, top=1cm, bottom=1cm, right=1cm, left=1cm]
 
 \usepackage{xunicode}
@@ -31,8 +32,12 @@
 ]
 
 \setmathfont{latinmodern-math.otf}
-\setmathfont[range={\varnothing,\setminus}]{XITS Math.otf}
-\setmathfont[range=bb]{texgyrepagella-math.otf}
+\setmathfont[range={\varnothing}]{Asana-Math.otf}
+\setmathfont[range=bb]{Asana-Math.otf}
+
+\AtBeginDocument{
+    \renewcommand{\setminus}{\mathbin{\big\backslash}}%
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\renewcommand{\baselinestretch}{1.2857142857142858094476878250134177505970001220703125}\large\rm
@@ -134,7 +139,7 @@
     \begin{example}
         Удобные макросы для математического текста можно посмотреть в преамбуле:
         $$
-        \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \sigma(A) = \{\lambda\mid\nexists(A-\lambda I)^{-1}\}
+        \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \sigma(A) = \{\lambda\mid\nexists(A-\lambda I)^{-1}\} \RR\setminus\ZZ \varnothing \emptyset
         $$
     \end{example}
     \section{Определение и примеры нормированных алгебр. Свойства норм.}
