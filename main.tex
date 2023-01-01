@@ -15,7 +15,7 @@
 \usepackage{mathrsfs}
 \usepackage{yfonts}
 \usepackage[inline]{enumitem}
-\usepackage{arevmath}
+%\usepackage{arevmath}
 \usepackage{unicode-math}
 \usepackage{geometry}[a4papre, top=1cm, bottom=1cm, right=1cm, left=1cm]
 
@@ -23,21 +23,22 @@
 \usetikzlibrary{babel}
 
 % Font sepcifications
-\setmainfont{palatinolinotype}[
+\setmainfont{Paladin}[
     Extension = .ttf,
-    UprightFont = *-roman,
-    BoldFont = *-bold,
-    ItalicFont = *-italic,
-    BoldItalicFont = *-bolditalic
+    UprightFont = *-Roman,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
 ]
 
 \setmathfont{latinmodern-math.otf}
 \setmathfont[range={\varnothing}]{Asana-Math.otf}
-\setmathfont[range=bb]{Asana-Math.otf}
+\setmathfont[range=bb]{texgyrepagella-math.otf}
 
 \AtBeginDocument{
     \renewcommand{\setminus}{\mathbin{\big\backslash}}%
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\renewcommand{\baselinestretch}{1.2857142857142858094476878250134177505970001220703125}\large\rm
@@ -138,7 +139,7 @@
     \end{corollary}
     \begin{example}
         Удобные макросы для математического текста можно посмотреть в преамбуле:
-        $$
+        $$\rhd
         \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \sigma(A) = \{\lambda\mid\nexists(A-\lambda I)^{-1}\} \RR\setminus\ZZ \varnothing \emptyset
         $$
     \end{example}
