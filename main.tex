@@ -30,7 +30,7 @@
     BoldItalicFont = *-BoldItalic
 ]
 
-\setmathfont{latinmodern-math.otf}
+\setmathfont[bold-style=ISO]{latinmodern-math.otf}
 \setmathfont[range={\varnothing}]{Asana-Math.otf}
 \setmathfont[range=bb]{texgyrepagella-math.otf}
 
@@ -118,7 +118,7 @@
     \newpage
     \section[Алгебры, идеалы, условия обратимости.]{Алгебра, идеал, максимальный идеал.\\Условия обратимости.}
     Рассмотрим векторное пространство $V$ над полем $F$.
-    \begin{definition}
+    \begin{definition}\label{def:Algebra}
         \textbf{Алгеброй} называется \dots
     \end{definition}
     \begin{theorem}\label{th:some theorem}
@@ -133,7 +133,7 @@
     \begin{example}
         Удобные макросы для математического текста можно посмотреть в преамбуле:
         $$\rhd
-        \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \sigma(A) = \{\lambda\mid\nexists(A-\lambda I)^{-1}\} \RR\setminus\ZZ \varnothing \emptyset
+        \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \symbf{\sigma(A)} = \{\lambda\mid\nexists(A-\lambda I)^{-1}\} \RR\setminus\ZZ \varnothing \emptyset
         $$
     \end{example}
     \section[Нормы и нормированные алгебры]{Нормированная алгебра. Свойства нормы.}
@@ -143,16 +143,33 @@
         Теорема о непустоте спектра мультипликативного функционала в банаховой алгебре.
 
     \section[Пространство максимальных идеалов]{Пространство максимальных идеалов. Преобразование Гельфанда.\\Теорема Тихонова.}
-        Топология на пространстве максимальных идеалов. Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр.
+        Топология на пространстве максимальных идеалов.
+        \begin{theorem}[Тихонова]\label{th:Tikhonov}
+            content...
+        \end{theorem}
+        Преобразование Гельфанда для коммутативных алгебр.
 
     \section[Теорема Винера.]{Теорема Винера об абсолютной сходимости.}
-        Теорема Винера об абсолютно сходящихся рядах.
+        \begin{theorem}[Винера]\label{th:Wiener}
+            об абсолютно сходящихся рядах
+            \href{https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/jlms/49.3.493}{something to read}
+        \end{theorem}
 
-    \section[Алгебра с инволюцией. $C^*$-алгебра.]{Алгебра с инволюцией. $C^*$-алгебра.}
-         Теорема Банаха~--- Алаоглу. Теорема Стоуна~--- Вейерштрасса.
+    \section{Алгебра с инволюцией. $\symbf{C^*}$-алгебра.}
+        \begin{theorem}[Банаха~--- Алаоглу]\label{th:Alaoglu}
+            content...
+        \end{theorem}
+        \begin{theorem}[Стоуна~--- Вейерштрасса]\label{th:StoneWrstrs}
+            content...
+        \end{theorem}
 
     \section[Примеры пространств максимальных идеалов]{Примеры пространств максимальных идеалов.}
         \subsection{Почти периодические функции}
         \subsection{Квазипериодические функции}
-
+    \newpage
+    \begin{thebibliography}{10}
+        \addcontentsline{toc}{section}{Список литературы}
+        \bibitem{helemski}
+        А.Я.~Хелемский. Банаховы алгебры. Ориентировочный мини-курс лекций для аспирантов
+    \end{thebibliography}
 \end{document}
