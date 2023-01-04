@@ -14,11 +14,9 @@
 \usepackage{amsthm}
 \usepackage{mathrsfs}
 \usepackage{yfonts}
-\usepackage[inline]{enumitem}
 \usepackage{titlesec}
-%\usepackage{arevmath}
 \usepackage{unicode-math}
-\usepackage{geometry}[a4papre, top=1cm, bottom=1cm, right=1cm, left=1cm]
+\usepackage{geometry}[a4paper, top=1cm, bottom=1cm, right=1cm, left=1cm]
 
 \usepackage{xunicode}
 \usetikzlibrary{babel}
@@ -45,17 +43,6 @@
 %\renewcommand{\baselinestretch}{1.2857142857142858094476878250134177505970001220703125}\large\rm
 
 \makeatletter
-
-\newcommand{\inlineitem}[1][]{%
-    \ifnum\enit@type=\tw@
-    {\descriptionlabel{#1}}
-    \hspace{\labelsep}%
-    \else
-    \ifnum\enit@type=\z@
-    \refstepcounter{\@listctr}\fi
-    \quad\@itemlabel\hspace{\labelsep}%
-    \fi
-}
 
 \xpatchcmd{\proof}{\@addpunct{.}}{}{}{}
 
@@ -113,6 +100,10 @@
 \DeclareMathOperator{\transposed}{^{T}}
 \newcommand{\ollim}[1]{\olim\limits_{#1}}
 
+%%%
+\titleformat{\section}{\centering\Large\bfseries}{\numberline{\S\thesection}}{1cm}{}
+\titlespacing{\section}{0cm}{1.5cm}{0.5cm}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
     \begin{titlepage}
@@ -124,7 +115,7 @@
     \end{titlepage}
     \tableofcontents
     \newpage
-    \section{Алгебра, идеал, максимальный идеал. Условия обратимости.}
+    \section[Алгебры, идеалы, условия обратимости.]{Алгебра, идеал, максимальный идеал.\\Условия обратимости.}
     Рассмотрим векторное пространство $V$ над полем $F$.
     \begin{definition}
         \textbf{Алгеброй} называется \dots
@@ -144,20 +135,22 @@
         \factor{\RR}{\bb Z} \implby{\ref{th:some theorem}} \at{\partiald{}{x_i}\varphi(t)}{t=p} \iffdef \ddt\id=0 \quad \sigma(A) = \{\lambda\mid\nexists(A-\lambda I)^{-1}\} \RR\setminus\ZZ \varnothing \emptyset
         $$
     \end{example}
-    \section{Определение и примеры нормированных алгебр. Свойства норм.}
+    \section[Нормы и нормированные алгебры]{Нормированная алгебра. Свойства нормы.}
+        Определение и примеры нормированных алгебр. Свойства норм.
 
-    \section{Банахова алгебра. Теорема о непустоте спектра в банаховой алгебре.}
+    \section[Банаховы алгебры. Спектр]{Банахова алгебра.\\Спектр мультипликативного функционала}
+        Теорема о непустоте спектра мультипликативного функционала в банаховой алгебре.
 
-    \section{Топология на пространстве максимальных идеалов. Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр.}
+    \section[Пространство максимальных идеалов]{Пространство максимальных идеалов. Преобразование Гельфанда.\\Теорема Тихонова.}
+        Топология на пространстве максимальных идеалов. Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр.
 
-    \section{Теорема Винера об абсолютно сходящихся рядах.}
+    \section[Теорема Винера.]{Теорема Винера об абсолютной сходимости.}
+        Теорема Винера об абсолютно сходящихся рядах.
 
-    \section{Теорема Тихонова. Преобразование Гельфанда для коммутативных алгебр}
+    \section[Алгебра с инволюцией. $C^*$-алгебра.]{Алгебра с инволюцией. $C^*$-алгебра. Теорема Банаха~--- Алаоглу. Теорема Стоуна~--- Вейерштрасса.}
 
-    \section{Теорема Винера об абсолютной сходимости}
-
-    \section{Алгебра с инволюцией. $C^*$-алгебра. Теорема Банаха~--- Алаоглу. Теорема Стоуна~--- Вейерштрасса.}
-
-    \section{Примеры пространств максимальных идеалов (почти периодические функции, квазипериодические функции).}
+    \section[Примеры пространств максимальных идеалов]{Примеры пространств максимальных идеалов.}
+        \subsection{Почти периодические функции}
+        \subsection{Квазипериодические функции}
 
 \end{document}
